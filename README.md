@@ -29,7 +29,115 @@ VanillaJS는 JavaScripts의 핵심이다.
 index.html, index.css, index.js 만들고 연동
 test는 alert(''); , console.log('') 요놈으로 테스트함.
 
+#### 1.5.1 Waht are we learning
+언어의 컨셉을 배운다. 
 
+#### 1.6 Your first JS Variable
+변수: Variables
+JavaScirpt에서 변수를 선언하고, 초기화할때는 let이라는 자료형을 사용한다. 물론 다른거를 사용하기도 함.
+```js
+console.log('Im Working. Im JS. Im Beautifu. Im worth it ');
+let a = 221;
+let  b = a - 5;
+a = 4;
+console.log(b, a);  // 216 4  
+
+```
+
+#### 1.7 let, const, var
+let : 변수를 초기화 하는 것을 가능하게 한다.
+const : 변수를 상수로 만들기에 변수를 초기화하는 것이 되지 않는다.
+var : let, const 나오기 이전에 위의 선택지들이 없을 때 나옴, let과 같이 변수의 값을 변경이 가능하다.
+
+* const로 선언하면 변경이 불가능하다.
+```js
+console.log('Im Working. Im JS. Im Beautifu. Im worth it ');
+const a = 221;
+var  b = a - 5;
+a = 4; //const로 선언을 하고 바꾸려고 하면 에러가 난다. 
+console.log(b, a); # error 가 나타난다.
+```
+
+* var 를 사용하면?
+```js
+console.log('Im Working. Im JS. Im Beautifu. Im worth it ');
+var a = 221;
+var  b = a - 5;
+a = 4; //const로 선언을 하고 바꾸려고 하면 에러가 난다.
+console.log(b, a);   #  221 4
+```
+
+#### 1.8 Data Types on JS
+1. 주석(comment)
+2. DataType => String, boolean, number, float
+
+* DataType
+```js
+// String
+const string = "string_test";
+console.log(string);
+
+// Boolean => True or False
+const boolean = true;
+console.log(boolean);
+
+// Number
+const number = 77;
+console.log(number);
+
+// Float
+const float  = 55.1;
+console.log(float);
+```
+
+#### 1.9 Organizing Data with Arrays
+1. 우리가 가진 데이터 타입을 정리하는 방법은? => Array
+
+##### 1. array 사용 방법
+```js
+// Array
+const something = "Something"
+const daysOfWeek =  ["Mon", "Tue", "Wed",
+ "Thu", "Fri", "Sat", "Sun", 54, true, false, something];
+
+console.log(daysOfWeek); // 모든 목록 출력
+console.log(daysOfWeek[3]); // Wed
+console.log(daysOfWeek[100]); // undefined
+```
+
+#### 1.10 Organizing Data with Object
+1. Object -> 각각의 value에 이름을 줄 수 있다.
+
+##### 1. Object를 사용하고, 수정하는 방법
+```js
+const nicoInfo = {
+    name : "nico",
+    age : 25,
+    gender : "Male",
+    isHandsome : false,
+    favMovies : ["Along the gods", "LOTR", "Oldboy"],
+    favFood : [
+        {
+            name :  "Kimchi",
+            fatty : false,
+            name : "Cheese burger"
+        },
+        {
+            name : "Banana"
+        }
+    ]
+ };
+
+ console.log(nicoInfo.gender); // Male
+
+ nicoInfo.gender = "Female" // Object 는 수정 가능
+
+console.log(nicoInfo); // all
+console.log(nicoInfo.name);  // nico
+console.log(nicoInfo.gender); // Female
+console.log(nicoInfo.favMovies) // (3) ["Along the gods", "LOTR", "Oldboy"]
+console.log(nicoInfo.favFood[0].name) // Cheese burger
+```
 
 
 
